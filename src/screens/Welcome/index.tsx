@@ -3,8 +3,10 @@ import { CircleButton } from "../../components/CircleButton";
 import DogPhoto from "../../assets/welcome_pet.png";
 
 import { Container, Content, Header, Photo, Subtitle, Title } from "./styles";
+import { useTheme } from "styled-components";
 
 export const Welcome = () => {
+  const theme = useTheme();
   return (
     <Container>
       <Header>
@@ -19,7 +21,10 @@ export const Welcome = () => {
           animais a terem um lar melhor.
         </Subtitle>
 
-        <CircleButton />
+        <CircleButton
+          colors={theme.colors.gradient}
+          rippleColor={theme.colors.primary_400}
+        />
       </Content>
     </Container>
   );
