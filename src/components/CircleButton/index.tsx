@@ -9,6 +9,7 @@ import { Container } from "./styles";
 
 export const CircleButton = () => {
   const theme = useTheme();
+
   return (
     <Container>
       <LinearGradient
@@ -22,6 +23,8 @@ export const CircleButton = () => {
           height: RFValue(66),
           width: RFValue(66),
         }}
+        accessible
+        accessibilityRole="button"
       >
         <ArrowRight size={36} color="#fff" weight="bold" />
       </LinearGradient>
