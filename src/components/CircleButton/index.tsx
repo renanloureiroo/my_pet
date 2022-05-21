@@ -1,17 +1,19 @@
 import { LinearGradient } from "expo-linear-gradient";
 import { ArrowRight } from "phosphor-react-native";
 import React from "react";
+import { RectButtonProps } from "react-native-gesture-handler";
 
 import { RFValue } from "react-native-responsive-fontsize";
 import { useTheme } from "styled-components/native";
 
 import { Container } from "./styles";
 
-export const CircleButton = () => {
-  const theme = useTheme();
+interface CircleButtonProps extends RectButtonProps {}
 
+export const CircleButton = ({ ...rest }: CircleButtonProps) => {
+  const theme = useTheme();
   return (
-    <Container>
+    <Container {...rest}>
       <LinearGradient
         colors={theme.colors.gradient}
         start={{ x: 0.9, y: 0.1 }}
