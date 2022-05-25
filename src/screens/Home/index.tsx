@@ -15,7 +15,13 @@ export const Home = () => {
         <VoidBox />
       </Header>
       <Main>
-        <Card />
+        <Card
+          data={{
+            id: "1",
+            name: "Renan Loureiro",
+            url: "https://github.com/renanloureiroo.png",
+          }}
+        />
       </Main>
     </Container>
   );
