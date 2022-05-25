@@ -17,3 +17,8 @@ export const VoidBox = styled.View`
   width: ${RFValue(50)}px;
   height: ${RFValue(50)}px;
 `;
+
+export const Main = styled.View`
+  flex: 1;
+  padding: 0 ${RFValue(5)}px;
+`;
